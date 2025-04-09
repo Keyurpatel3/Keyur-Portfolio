@@ -167,24 +167,19 @@ img {
 }
 
 .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
   font-weight: 500;
-  position: relative;
-  padding: 5px 0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  transition: var(--transition);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
+.nav-links a:hover {
+  color: #4A9EFF;
+  background: rgba(74, 158, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .social-nav {
