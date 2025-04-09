@@ -401,11 +401,14 @@ img {
   background-color: rgba(74, 158, 255, 0.05);
   border-radius: var(--border-radius);
   transition: var(--transition);
+  min-height: 100px;
+  justify-content: center;
 }
 
 .skill-item:hover {
   background-color: rgba(74, 158, 255, 0.1);
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item img {
@@ -413,6 +416,13 @@ img {
   height: 40px;
   object-fit: contain;
   margin-bottom: 10px;
+  filter: none;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover img {
+  transform: scale(1.1);
 }
 
 .skill-list {
