@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heat Exchanger Design | Keyur Patel</title>
+  <link rel="stylesheet" href="../Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">KP</a>
+      </div>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="social-nav">
+        <a href="https://www.linkedin.com/in/keyur-patel-4b87a4147" target="_blank" class="social-icon">
+          <img src="../images/LI-In-Bug.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/KeyurPatel2002" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail">
+    <div class="container">
+      <div class="project-header" data-aos="fade-up">
+        <h1>Heat Exchanger Design</h1>
+        <div class="project-meta">
+          <span class="project-date">2024</span>
+          <div class="project-tags">
+            <span>Thermal Analysis</span>
+            <span>Fluid Dynamics</span>
+            <span>CAD Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-gallery" data-aos="fade-up">
+        <div class="main-image">
+          <img src="../images/project7-main.jpg" alt="Heat Exchanger Main View" id="mainImage">
+        </div>
+        <div class="thumbnail-container">
+          <div class="thumbnail active" onclick="changeImage('../images/project7-main.jpg')">
+            <img src="../images/project7-main.jpg" alt="Main View">
+          </div>
+          <div class="thumbnail" onclick="changeImage('../images/project7-alt.jpg')">
+            <img src="../images/project7-alt.jpg" alt="Side View">
+          </div>
+          <div class="thumbnail" onclick="changeImage('../images/project7-alt2.jpg')">
+            <img src="../images/project7-alt2.jpg" alt="Detail View">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-content" data-aos="fade-up">
+        <div class="project-description">
+          <h2>Project Overview</h2>
+          <p>This project involved the design and optimization of an industrial heat exchanger system for a manufacturing facility. The primary goal was to improve thermal efficiency while maintaining cost-effectiveness and ensuring reliable operation.</p>
+          <p>The heat exchanger was designed to handle high-temperature fluid transfer between two process streams, with a focus on minimizing energy losses and maximizing heat transfer efficiency.</p>
+        </div>
+
+        <div class="project-details">
+          <h2>Technical Details</h2>
+          <ul>
+            <li>Heat transfer area: 250 m²</li>
+            <li>Operating temperature range: 150°C - 300°C</li>
+            <li>Flow rate: 500 m³/h</li>
+            <li>Pressure rating: 10 bar</li>
+            <li>Material: Stainless Steel 316L</li>
+          </ul>
+        </div>
+
+        <div class="project-results">
+          <h2>Results & Impact</h2>
+          <p>The redesigned heat exchanger achieved a 25% improvement in thermal efficiency compared to the previous system. This resulted in significant energy savings and reduced operational costs for the facility.</p>
+          <p>Key improvements included:</p>
+          <ul>
+            <li>Enhanced heat transfer coefficient through optimized fin design</li>
+            <li>Reduced pressure drop across the system</li>
+            <li>Improved maintenance accessibility</li>
+            <li>Extended service life through better material selection</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-navigation" data-aos="fade-up">
+        <a href="mechanical-assembly.html" class="btn secondary-btn">Next Project</a>
+        <a href="../index.html#projects" class="btn primary-btn">Back to Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Keyur Patel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+      // Update active thumbnail
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+        if (thumb.querySelector('img').src === src) {
+          thumb.classList.add('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html> 
