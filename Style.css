@@ -705,84 +705,101 @@ img {
 }
 
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .contact-card {
-  display: flex;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
     gap: 20px;
-  background-color: var(--card-bg);
-  padding: 25px;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  transition: var(--transition);
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--box-shadow);
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
 }
 
 .contact-icon {
-  inline-size: 50px;
-  block-size: 50px;
-  background-color: rgba(74, 158, 255, 0.1);
-  border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(74, 158, 255, 0.1);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-  justify-content: center;
-  color: var(--primary-color);
-  font-size: 1.2rem;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
 }
 
 .contact-details h3 {
-  margin-block-end: 5px;
+    margin-bottom: 5px;
+    color: var(--light-text);
 }
 
 .contact-details a {
-  color: var(--gray-text);
-  transition: var(--transition);
+    color: var(--gray-text);
+    transition: var(--transition);
 }
 
 .contact-details a:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .social-links {
-  display: flex;
-  gap: 15px;
-  margin-block-start: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-  .social-link {
-  inline-size: 40px;
-  block-size: 40px;
-  background-color: rgba(74, 158, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
+.social-link {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(74, 158, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-  justify-content: center;
-  transition: var(--transition);
+    justify-content: center;
+    transition: var(--transition);
 }
 
 .social-link img {
-  inline-size: 20px;
-  block-size: 20px;
-  object-fit: contain;
-  }
-  
-  .social-link:hover {
-  background-color: rgba(74, 158, 255, 0.2);
-  transform: translateY(-3px);
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.social-link:hover {
+    background-color: rgba(74, 158, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-icon {
+        margin-bottom: 15px;
+    }
 }
 
 /* Contact Form */
@@ -1157,24 +1174,24 @@ img {
   box-shadow: 0 15px 30px rgba(74, 158, 255, 0.2);
 }
 
-.certification-icon {
-  inline-size: 60px;
-  block-size: 60px;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(74, 158, 255, 0.1);
-  border-radius: 8px;
-  padding: 8px;
+.certification-card .certification-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
 
-.certification-icon img {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: contain;
-  max-inline-size: 44px;
-  max-block-size: 44px;
+.certification-card .certification-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.certification-card:hover .certification-icon {
+    transform: scale(1.05);
 }
 
 .certification-link {
@@ -1213,15 +1230,9 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   
-  .certification-icon {
-    inline-size: 50px;
-    block-size: 50px;
-    padding: 6px;
-  }
-
-  .certification-icon img {
-    max-inline-size: 38px;
-    max-block-size: 38px;
+  .certification-card .certification-icon {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -1230,15 +1241,9 @@ img {
     grid-template-columns: 1fr;
   }
   
-  .certification-icon {
-    inline-size: 45px;
-    block-size: 45px;
-    padding: 6px;
-  }
-
-  .certification-icon img {
-    max-inline-size: 33px;
-    max-block-size: 33px;
+  .certification-card .certification-icon {
+    width: 80px;
+    height: 80px;
   }
 }
 
