@@ -1158,18 +1158,23 @@ img {
 }
 
 .certification-icon {
-  inline-size: 80px;
-  block-size: 80px;
+  inline-size: 60px;
+  block-size: 60px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(74, 158, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
 }
 
 .certification-icon img {
   inline-size: 100%;
   block-size: 100%;
   object-fit: contain;
+  max-inline-size: 44px;
+  max-block-size: 44px;
 }
 
 .certification-link {
@@ -1209,8 +1214,14 @@ img {
   }
   
   .certification-icon {
-    inline-size: 60px;
-    block-size: 60px;
+    inline-size: 50px;
+    block-size: 50px;
+    padding: 6px;
+  }
+
+  .certification-icon img {
+    max-inline-size: 38px;
+    max-block-size: 38px;
   }
 }
 
@@ -1220,8 +1231,14 @@ img {
   }
   
   .certification-icon {
-    inline-size: 50px;
-    block-size: 50px;
+    inline-size: 45px;
+    block-size: 45px;
+    padding: 6px;
+  }
+
+  .certification-icon img {
+    max-inline-size: 33px;
+    max-block-size: 33px;
   }
 }
 
