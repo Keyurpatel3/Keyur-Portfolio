@@ -1,0 +1,246 @@
+/* Shared Certification Styles */
+:root {
+    --dark-bg: #1a1a1a;
+    --darker-bg: #0d0d0d;
+    --card-bg: #262626;
+    --border-color: #333333;
+    --primary-color: #4a9eff;
+    --light-text: #ffffff;
+    --gray-text: #a0a0a0;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.certification-detail {
+    padding: 2rem 0;
+    background: var(--dark-bg);
+    color: var(--light-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.certification-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.certification-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--darker-bg);
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.certification-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.certification-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    color: var(--gray-text);
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.certification-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+}
+
+.certification-info {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.certification-skills {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.certification-skills li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-left: 0;
+    position: relative;
+}
+
+.certification-skills li:last-child {
+    border-bottom: none;
+}
+
+.certification-skills li::before {
+    display: none;
+}
+
+.certification-viewer {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-container {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--darker-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+}
+
+.certificate-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease;
+}
+
+.certificate-container img:hover {
+    transform: scale(1.02);
+}
+
+.certification-navigation {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+.certification-navigation .btn {
+    min-width: 180px;
+    justify-content: center;
+    background: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certification-navigation .btn:hover {
+    background: #3a8eef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(74, 158, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .certification-content {
+        grid-template-columns: 250px 1fr;
+    }
+    
+    .certificate-container {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certification-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-info {
+        position: static;
+    }
+    
+    .certificate-container {
+        min-height: 400px;
+    }
+    
+    .certification-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .certification-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certification-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .certification-header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .certification-navigation {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .certification-navigation .btn {
+        width: 100%;
+    }
+    
+    .certificate-container {
+        min-height: 300px;
+        padding: 1rem;
+    }
+} 
